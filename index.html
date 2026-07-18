@@ -1,57 +1,200 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Assets vs Liabilities</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kings Oluwafemi - Assets vs Liabilities</title>
 <style>
-body{margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#111;font-family:Arial,sans-serif}
-.box{width:1080px;height:1080px;background:linear-gradient(135deg,#111,#222);color:#fff;padding:80px;box-sizing:border-box;position:relative}
-h1{font-size:78px;line-height:1.1;text-align:center}
-.gold{color:#D4AF37}
-p{text-align:center;font-size:30px;color:#ddd}
-.cols{display:flex;justify-content:space-between;margin-top:80px}
-.card{width:45%;background:#1d1d1d;padding:30px;border-radius:20px;border:1px solid #D4AF37}
-.card h2{color:#D4AF37}
-li{font-size:28px;margin:15px 0}
-.footer{position:absolute;bottom:80px;width:calc(100% - 160px);text-align:center;font-size:34px}
-.watermark{position:absolute;right:30px;bottom:20px;color:#D4AF37;font-style:italic}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  .post-image {
+    width: 1080px;
+    height: 1080px;
+    background: linear-gradient(160deg, #0d0d0d 0%, #1a1a1a 40%, #0d0d0d 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.9);
+    overflow: hidden;
+  }
+
+  .post-image::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .post-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.008) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.008) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+  }
+
+  .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .tag {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #d4a843;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.7;
+  }
+
+  .main-quote {
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .main-quote .gold {
+    color: #d4a843;
+    position: relative;
+  }
+
+  .main-quote .gold::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d4a843, transparent);
+    border-radius: 2px;
+  }
+
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d4a843, transparent);
+    margin: 35px auto;
+  }
+
+  .sub-text {
+    font-size: 22px;
+    font-weight: 300;
+    color: #999999;
+    letter-spacing: 2px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .sub-text .name {
+    color: #d4a843;
+    font-weight: 600;
+  }
+
+  .corner {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-color: rgba(212, 168, 67, 0.12);
+    border-style: solid;
+    border-width: 0;
+    z-index: 1;
+  }
+
+  .corner-tl { top: 40px; left: 40px; border-top-width: 2px; border-left-width: 2px; }
+  .corner-tr { top: 40px; right: 40px; border-top-width: 2px; border-right-width: 2px; }
+  .corner-bl { bottom: 40px; left: 40px; border-bottom-width: 2px; border-left-width: 2px; }
+  .corner-br { bottom: 40px; right: 40px; border-bottom-width: 2px; border-right-width: 2px; }
+
+  .brand {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: rgba(255,255,255,0.05);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @media (max-width: 1100px) {
+    .post-image {
+      width: 100vw;
+      height: 100vw;
+      padding: 6vw;
+    }
+    .main-quote { font-size: 5.2vw; }
+    .tag { font-size: 1.2vw; letter-spacing: 0.4vw; }
+    .sub-text { font-size: 2vw; }
+    .brand { font-size: 1.2vw; bottom: 3vw; letter-spacing: 0.5vw; }
+    .corner { width: 4vw; height: 4vw; }
+    .corner-tl { top: 3vw; left: 3vw; }
+    .corner-tr { top: 3vw; right: 3vw; }
+    .corner-bl { bottom: 3vw; left: 3vw; }
+    .corner-br { bottom: 3vw; right: 3vw; }
+    .divider { width: 5vw; margin: 3vw auto; }
+    .post-image::before { width: 60vw; height: 60vw; }
+  }
 </style>
 </head>
 <body>
-<div class="box">
-<h1>BUY <span class="gold">ASSETS</span><br>NOT JUST THINGS.</h1>
 
-<p>The choices you make today shape your financial future.</p>
+<div class="post-image">
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
 
-<div class="cols">
-<div class="card">
-<h2>💰 Assets</h2>
-<ul>
-<li>📈 Investments</li>
-<li>🏠 Rental Property</li>
-<li>💼 Business</li>
-<li>🧠 Valuable Skills</li>
-</ul>
+  <div class="content">
+    <div class="tag">💡 The Wealth Rule</div>
+
+    <div class="main-quote">
+      Rich people buy <span class="gold">assets</span>.<br>
+      Poor people buy <span class="gold">liabilities</span>.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="sub-text">
+      — <span class="name">Kings Oluwafemi</span>
+    </div>
+  </div>
+
+  <div class="brand">Kings Oluwafemi</div>
 </div>
 
-<div class="card">
-<h2>💳 Liabilities</h2>
-<ul>
-<li>🚗 Car Loan</li>
-<li>💸 Credit Card Debt</li>
-<li>🛍️ Luxury Purchases</li>
-<li>📉 Things that lose value</li>
-</ul>
-</div>
-</div>
-
-<div class="footer">
-Ask yourself:<br>
-<span class="gold">"Will this pay me or cost me?"</span>
-</div>
-
-<div class="watermark">Kings Oluwafemi</div>
-
-</div>
 </body>
-</html>
+  </html>
