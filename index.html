@@ -28,6 +28,7 @@
     box-shadow: 0 30px 80px rgba(0,0,0,0.9);
     overflow: hidden;
   }
+  /* Dark overlay - stronger for bold text */
   .post-image::before {
     content: '';
     position: absolute;
@@ -35,9 +36,10 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.75);
     z-index: 0;
   }
+  /* Premium glow */
   .post-image::after {
     content: '';
     position: absolute;
@@ -46,7 +48,7 @@
     width: 700px;
     height: 700px;
     transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(212, 168, 67, 0.06) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     z-index: 0;
   }
@@ -56,28 +58,30 @@
     width: 100%;
   }
   .tag {
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 6px;
     text-transform: uppercase;
     color: #d4a843;
     margin-bottom: 30px;
     font-family: 'Inter', sans-serif;
-    opacity: 0.8;
+    opacity: 0.9;
   }
+  /* BOLD main text - much larger and heavier */
   .main-quote {
-    font-size: 62px;
-    font-weight: 800;
-    line-height: 1.15;
+    font-size: 76px;
+    font-weight: 900;
+    line-height: 1.1;
     color: #ffffff;
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
     max-width: 900px;
     margin: 0 auto;
-    text-shadow: 0 4px 40px rgba(0,0,0,0.5);
+    text-shadow: 0 4px 50px rgba(0,0,0,0.7);
   }
   .main-quote .gold {
     color: #d4a843;
     position: relative;
+    font-weight: 900;
   }
   .main-quote .gold::after {
     content: '';
@@ -85,51 +89,51 @@
     bottom: -4px;
     left: 0;
     width: 100%;
-    height: 3px;
+    height: 4px;
     background: linear-gradient(90deg, transparent, #d4a843, transparent);
     border-radius: 2px;
   }
   .divider {
-    width: 60px;
-    height: 2px;
+    width: 80px;
+    height: 3px;
     background: linear-gradient(90deg, transparent, #d4a843, transparent);
-    margin: 35px auto;
+    margin: 40px auto;
   }
   .sub-text {
-    font-size: 22px;
-    font-weight: 300;
+    font-size: 26px;
+    font-weight: 400;
     color: #cccccc;
     letter-spacing: 2px;
     font-family: 'Inter', sans-serif;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 30px rgba(0,0,0,0.8);
   }
   .sub-text .name {
     color: #d4a843;
-    font-weight: 600;
+    font-weight: 700;
   }
   .corner {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    border-color: rgba(212, 168, 67, 0.2);
+    width: 60px;
+    height: 60px;
+    border-color: rgba(212, 168, 67, 0.25);
     border-style: solid;
     border-width: 0;
     z-index: 1;
   }
-  .corner-tl { top: 40px; left: 40px; border-top-width: 2px; border-left-width: 2px; }
-  .corner-tr { top: 40px; right: 40px; border-top-width: 2px; border-right-width: 2px; }
-  .corner-bl { bottom: 40px; left: 40px; border-bottom-width: 2px; border-left-width: 2px; }
-  .corner-br { bottom: 40px; right: 40px; border-bottom-width: 2px; border-right-width: 2px; }
+  .corner-tl { top: 40px; left: 40px; border-top-width: 3px; border-left-width: 3px; }
+  .corner-tr { top: 40px; right: 40px; border-top-width: 3px; border-right-width: 3px; }
+  .corner-bl { bottom: 40px; left: 40px; border-bottom-width: 3px; border-left-width: 3px; }
+  .corner-br { bottom: 40px; right: 40px; border-bottom-width: 3px; border-right-width: 3px; }
   .brand {
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    color: rgba(255,255,255,0.08);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 6px;
+    color: rgba(255,255,255,0.06);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 8px;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
   }
@@ -139,16 +143,16 @@
       height: 100vw;
       padding: 6vw;
     }
-    .main-quote { font-size: 5.6vw; }
-    .tag { font-size: 1.2vw; letter-spacing: 0.4vw; }
-    .sub-text { font-size: 2vw; }
-    .brand { font-size: 1.2vw; bottom: 3vw; letter-spacing: 0.5vw; }
-    .corner { width: 4vw; height: 4vw; }
+    .main-quote { font-size: 7vw; }
+    .tag { font-size: 1.4vw; letter-spacing: 0.5vw; }
+    .sub-text { font-size: 2.2vw; }
+    .brand { font-size: 1.2vw; bottom: 3vw; letter-spacing: 0.6vw; }
+    .corner { width: 5vw; height: 5vw; }
     .corner-tl { top: 3vw; left: 3vw; }
     .corner-tr { top: 3vw; right: 3vw; }
     .corner-bl { bottom: 3vw; left: 3vw; }
     .corner-br { bottom: 3vw; right: 3vw; }
-    .divider { width: 5vw; margin: 3vw auto; }
+    .divider { width: 7vw; height: 0.3vw; margin: 3.5vw auto; }
     .post-image::before { width: 60vw; height: 60vw; }
   }
 </style>
@@ -160,11 +164,11 @@
   <div class="corner corner-bl"></div>
   <div class="corner corner-br"></div>
   <div class="content">
-    <div class="tag">⛓️ The Truth</div>
+    <div class="tag">⛓️ BREAK FREE</div>
     <div class="main-quote">
       The system wasn't built<br>
-      <span class="gold">for you</span> to win.<br>
-      It was built <span class="gold">for you</span> to stay.
+      <span class="gold">FOR YOU</span> to win.<br>
+      It was built <span class="gold">FOR YOU</span> to stay.
     </div>
     <div class="divider"></div>
     <div class="sub-text">
