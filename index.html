@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kings Oluwafemi - Break Free</title>
+<title>Kings Oluwafemi - Salary Trap</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -12,23 +12,23 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Montserrat', 'Arial Black', 'Impact', sans-serif;
   }
   .post-image {
     width: 1080px;
     height: 1080px;
-    background: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1080&q=80') center/cover no-repeat;
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1080&q=80') center/cover no-repeat;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 80px;
+    padding: 60px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.9);
     overflow: hidden;
   }
-  /* Dark overlay - stronger for bold text */
+  /* Dark overlay - strong for contrast */
   .post-image::before {
     content: '';
     position: absolute;
@@ -36,20 +36,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.70);
     z-index: 0;
   }
-  /* Premium glow */
+  /* Bottom gradient for depth */
   .post-image::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 700px;
-    height: 700px;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(212, 168, 67, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
     z-index: 0;
   }
   .content {
@@ -57,122 +55,89 @@
     z-index: 1;
     width: 100%;
   }
-  .tag {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 6px;
+  /* Top small text - aggressive */
+  .top-text {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: #d4a843;
-    margin-bottom: 30px;
-    font-family: 'Inter', sans-serif;
-    opacity: 0.9;
-  }
-  /* BOLD main text - much larger and heavier */
-  .main-quote {
-    font-size: 76px;
-    font-weight: 900;
-    line-height: 1.1;
     color: #ffffff;
-    letter-spacing: -2px;
-    max-width: 900px;
-    margin: 0 auto;
-    text-shadow: 0 4px 50px rgba(0,0,0,0.7);
+    opacity: 0.85;
+    line-height: 1.3;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
   }
-  .main-quote .gold {
+  .top-text .highlight {
     color: #d4a843;
-    position: relative;
+  }
+  /* Main headline - MASSIVE */
+  .main-line {
+    font-size: 110px;
     font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    color: #ffffff;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+    margin: 20px 0;
+    font-family: 'Arial Black', 'Impact', sans-serif;
   }
-  .main-quote .gold::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, #d4a843, transparent);
-    border-radius: 2px;
+  .main-line.red {
+    font-size: 120px;
+    color: #ff3b30;
+    text-shadow: 0 0 60px rgba(255, 59, 48, 0.25), 0 4px 40px rgba(0,0,0,0.6);
   }
-  .divider {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #d4a843, transparent);
-    margin: 40px auto;
-  }
-  .sub-text {
-    font-size: 26px;
-    font-weight: 400;
-    color: #cccccc;
-    letter-spacing: 2px;
-    font-family: 'Inter', sans-serif;
-    text-shadow: 0 2px 30px rgba(0,0,0,0.8);
-  }
-  .sub-text .name {
-    color: #d4a843;
+  /* Bottom text */
+  .bottom-text {
+    font-size: 48px;
     font-weight: 700;
+    color: #ffffff;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 30px rgba(0,0,0,0.8);
+    font-family: 'Montserrat', sans-serif;
   }
-  .corner {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    border-color: rgba(212, 168, 67, 0.25);
-    border-style: solid;
-    border-width: 0;
-    z-index: 1;
+  .bottom-text .gold {
+    color: #d4a843;
   }
-  .corner-tl { top: 40px; left: 40px; border-top-width: 3px; border-left-width: 3px; }
-  .corner-tr { top: 40px; right: 40px; border-top-width: 3px; border-right-width: 3px; }
-  .corner-bl { bottom: 40px; left: 40px; border-bottom-width: 3px; border-left-width: 3px; }
-  .corner-br { bottom: 40px; right: 40px; border-bottom-width: 3px; border-right-width: 3px; }
+  /* Brand watermark - bottom right */
   .brand {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    color: rgba(255,255,255,0.06);
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 8px;
+    bottom: 35px;
+    right: 45px;
+    z-index: 2;
+    color: rgba(255,255,255,0.08);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
   @media (max-width: 1100px) {
     .post-image {
       width: 100vw;
       height: 100vw;
-      padding: 6vw;
+      padding: 5vw;
     }
-    .main-quote { font-size: 7vw; }
-    .tag { font-size: 1.4vw; letter-spacing: 0.5vw; }
-    .sub-text { font-size: 2.2vw; }
-    .brand { font-size: 1.2vw; bottom: 3vw; letter-spacing: 0.6vw; }
-    .corner { width: 5vw; height: 5vw; }
-    .corner-tl { top: 3vw; left: 3vw; }
-    .corner-tr { top: 3vw; right: 3vw; }
-    .corner-bl { bottom: 3vw; left: 3vw; }
-    .corner-br { bottom: 3vw; right: 3vw; }
-    .divider { width: 7vw; height: 0.3vw; margin: 3.5vw auto; }
-    .post-image::before { width: 60vw; height: 60vw; }
+    .top-text { font-size: 3vw; letter-spacing: 0.3vw; }
+    .main-line { font-size: 10vw; letter-spacing: -0.3vw; }
+    .main-line.red { font-size: 11vw; }
+    .bottom-text { font-size: 4.5vw; }
+    .brand { font-size: 1.4vw; bottom: 3vw; right: 4vw; }
   }
 </style>
 </head>
 <body>
 <div class="post-image">
-  <div class="corner corner-tl"></div>
-  <div class="corner corner-tr"></div>
-  <div class="corner corner-bl"></div>
-  <div class="corner corner-br"></div>
   <div class="content">
-    <div class="tag">⛓️ BREAK FREE</div>
-    <div class="main-quote">
-      The system wasn't built<br>
-      <span class="gold">FOR YOU</span> to win.<br>
-      It was built <span class="gold">FOR YOU</span> to stay.
+    <div class="top-text">
+      YOUR BOSS DOESN'T WANT<br>
+      YOU TO KNOW THIS BUT...
     </div>
-    <div class="divider"></div>
-    <div class="sub-text">
-      — <span class="name">Kings Oluwafemi</span>
+    <div class="main-line">YOUR SALARY</div>
+    <div class="main-line red">IS A DRUG</div>
+    <div class="bottom-text">
+      And your boss is <span class="gold">YOUR DEALER</span>.
     </div>
   </div>
   <div class="brand">Kings Oluwafemi</div>
