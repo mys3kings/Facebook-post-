@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Post 1 | Kings Oluwafemi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+<title>Kings Oluwafemi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
@@ -20,8 +21,8 @@ body{
 display:flex;
 justify-content:center;
 align-items:center;
-background:#111827;
 min-height:100vh;
+background:#0a0a0a;
 }
 
 .post{
@@ -30,8 +31,8 @@ width:1080px;
 height:1350px;
 
 background:
-linear-gradient(rgba(15,23,42,.82),rgba(15,23,42,.82)),
-url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1400&q=80");
+linear-gradient(rgba(8,15,12,.78),rgba(8,15,12,.88)),
+url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1400&auto=format&fit=crop");
 
 background-size:cover;
 background-position:center;
@@ -39,54 +40,97 @@ background-position:center;
 position:relative;
 overflow:hidden;
 
-padding:90px;
+padding:95px;
 
 display:flex;
 flex-direction:column;
 justify-content:center;
+
 }
 
-.line{
+.post::before{
 
-width:90px;
-height:8px;
-background:#38bdf8;
-margin-bottom:30px;
+content:'';
+
+position:absolute;
+
+top:-180px;
+right:-180px;
+
+width:500px;
+height:500px;
+
+border-radius:50%;
+
+background:rgba(34,197,94,.08);
+
+}
+
+.post::after{
+
+content:'';
+
+position:absolute;
+
+bottom:-120px;
+left:-120px;
+
+width:350px;
+height:350px;
+
+border-radius:50%;
+
+background:rgba(34,197,94,.05);
 
 }
 
 .small{
 
-color:#38bdf8;
-font-size:32px;
+position:relative;
+
+font-size:28px;
+
 font-weight:800;
+
 letter-spacing:8px;
+
+color:#22c55e;
+
 text-transform:uppercase;
-margin-bottom:35px;
+
+margin-bottom:40px;
 
 }
 
-.big{
+.main{
 
-font-size:118px;
+position:relative;
+
+font-size:120px;
+
 font-weight:900;
-line-height:0.95;
-color:white;
+
+line-height:.95;
+
 text-transform:uppercase;
 
-}
-
-.highlight{
-
-color:#38bdf8;
+color:white;
 
 }
 
-.description{
+.green{
+
+color:#22c55e;
+
+}
+
+.desc{
+
+position:relative;
 
 margin-top:70px;
 
-font-size:44px;
+font-size:42px;
 
 line-height:1.5;
 
@@ -94,63 +138,61 @@ color:#d1d5db;
 
 max-width:720px;
 
+font-weight:500;
+
 }
 
 .brand{
 
 position:absolute;
 
-bottom:60px;
+bottom:70px;
 
 left:90px;
 
-font-size:28px;
+font-size:38px;
 
-font-weight:800;
+font-weight:900;
 
-letter-spacing:4px;
+letter-spacing:3px;
 
-color:white;
-
-opacity:.85;
+color:#22c55e;
 
 text-transform:uppercase;
 
 }
 
-.square{
+.tag{
 
-position:absolute;
+display:block;
 
-right:-140px;
+font-size:22px;
 
-top:-140px;
+font-weight:700;
 
-width:420px;
+letter-spacing:4px;
 
-height:420px;
+margin-top:8px;
 
-border:2px solid rgba(56,189,248,.25);
+color:white;
 
-transform:rotate(45deg);
+opacity:.9;
 
 }
 
-.circle{
+.bar{
 
 position:absolute;
 
-right:120px;
+left:90px;
 
-bottom:180px;
+top:140px;
 
-width:170px;
+width:120px;
 
-height:170px;
+height:8px;
 
-border-radius:50%;
-
-background:rgba(56,189,248,.08);
+background:#22c55e;
 
 }
 
@@ -162,37 +204,50 @@ background:rgba(56,189,248,.08);
 
 <div class="post">
 
-<div class="square"></div>
-
-<div class="circle"></div>
-
-<div class="line"></div>
+<div class="bar"></div>
 
 <div class="small">
-Money Mindset
+PERSONAL FINANCE
 </div>
 
-<div class="big">
-YOU DON'T<br>
-NEED MORE<br>
-HOURS.
+<div class="main">
+IF YOU CAN'T<br>
+
+MANAGE<br>
+
+<span class="green">₦100,000,</span>
 </div>
 
-<div class="big highlight" style="margin-top:25px;">
-YOU NEED<br>
-BETTER LEVERAGE.
+<div class="main" style="margin-top:35px;">
+
+YOU WON'T<br>
+
+MANAGE<br>
+
+<span class="green">₦10 MILLION.</span>
+
 </div>
 
-<div class="description">
+<div class="desc">
 
-The wealthy don't earn more because they work longer.
+Income creates opportunities.
 
-They earn more because their systems continue working long after they stop.
+<br><br>
+
+Habits determine whether you keep them.
 
 </div>
 
 <div class="brand">
-KINGS OLUWAFEMI
+
+👑 KINGS OLUWAFEMI
+
+<span class="tag">
+
+MONEY • WEALTH • GROWTH
+
+</span>
+
 </div>
 
 </div>
