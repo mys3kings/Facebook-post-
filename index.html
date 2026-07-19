@@ -3,135 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kings Oluwafemi - How to Make Money</title>
+<title>Money Rules</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0a0a0a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Montserrat', 'Arial Black', 'Impact', sans-serif;
-  }
-  .post-image {
-    width: 1080px;
-    height: 1080px;
-    background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1080&q=80') center/cover no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.9);
-    overflow: hidden;
-  }
-  .post-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
-    z-index: 0;
-  }
-  .post-image::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
-    z-index: 0;
-  }
-  .content {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-  }
-  .top-text {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #ffffff;
-    opacity: 0.85;
-    line-height: 1.3;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
-  }
-  .main-line {
-    font-size: 100px;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 1.05;
-    letter-spacing: -3px;
-    color: #ffffff;
-    text-shadow: 0 4px 40px rgba(0,0,0,0.6);
-    margin: 20px 0;
-    font-family: 'Arial Black', 'Impact', sans-serif;
-  }
-  .main-line.gold {
-    font-size: 110px;
-    color: #d4a843;
-    text-shadow: 0 0 60px rgba(212, 168, 67, 0.2), 0 4px 40px rgba(0,0,0,0.6);
-  }
-  .bottom-text {
-    font-size: 36px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-top: 10px;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 30px rgba(0,0,0,0.8);
-    font-family: 'Montserrat', sans-serif;
-  }
-  .bottom-text .highlight {
-    color: #ff3b30;
-  }
-  .brand {
-    position: absolute;
-    bottom: 35px;
-    right: 45px;
-    z-index: 2;
-    color: rgba(255,255,255,0.08);
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-  }
-  @media (max-width: 1100px) {
-    .post-image {
-      width: 100vw;
-      height: 100vw;
-      padding: 5vw;
-    }
-    .top-text { font-size: 3vw; letter-spacing: 0.3vw; }
-    .main-line { font-size: 9vw; letter-spacing: -0.3vw; }
-    .main-line.gold { font-size: 10vw; }
-    .bottom-text { font-size: 3.5vw; }
-    .brand { font-size: 1.4vw; bottom: 3vw; right: 4vw; }
-  }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter,sans-serif;
+}
+
+body{
+background:#f7f7f5;
+color:#111;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:50px;
+}
+
+.container{
+max-width:1200px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.small{
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#666;
+margin-bottom:20px;
+}
+
+h1{
+font-size:72px;
+line-height:1.05;
+margin-bottom:25px;
+font-weight:800;
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+color:#555;
+margin-bottom:40px;
+}
+
+button{
+background:#111;
+color:white;
+border:none;
+padding:18px 34px;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.card{
+background:white;
+padding:50px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.stat{
+font-size:60px;
+font-weight:800;
+margin-bottom:10px;
+}
+
+.label{
+color:#666;
+font-size:18px;
+margin-bottom:35px;
+}
+
+.line{
+height:8px;
+background:#ececec;
+border-radius:50px;
+margin:18px 0;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+width:82%;
+background:#111;
+border-radius:50px;
+}
+
+.footer{
+margin-top:35px;
+font-size:15px;
+color:#777;
+}
+
+@media(max-width:900px){
+.container{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:52px;
+}
+}
 </style>
+
 </head>
+
 <body>
-<div class="post-image">
-  <div class="content">
-    <div class="top-text">
-      THE TRUTH ABOUT<br>
-      MAKING MONEY
-    </div>
-    <div class="main-line">STOP</div>
-    <div class="main-line gold">TRADING TIME</div>
-    <div class="bottom-text">
-      Start building <span class="highlight">ASSETS</span>
-    </div>
-  </div>
-  <div class="brand">Kings Oluwafemi</div>
+
+<div class="container">
+
+<div>
+
+<div class="small">
+Personal Finance
 </div>
+
+<h1>
+Money grows where discipline lives.
+</h1>
+
+<p>
+The biggest financial advantage isn't earning more.
+It's learning how to make every decision count.
+Small habits become wealth over time.
+</p>
+
+<button>
+Learn More
+</button>
+
+</div>
+
+<div class="card">
+
+<div class="stat">
+82%
+</div>
+
+<div class="label">
+People wish they learned about money earlier.
+</div>
+
+<div class="line">
+<div class="fill"></div>
+</div>
+
+<div class="footer">
+Build habits before chasing income.
+</div>
+
+</div>
+
+</div>
+
 </body>
 </html>
